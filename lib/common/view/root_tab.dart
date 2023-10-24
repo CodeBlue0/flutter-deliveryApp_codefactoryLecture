@@ -1,6 +1,6 @@
 import 'package:codefactory/common/const/colors.dart';
 import 'package:codefactory/common/layout/default_layout.dart';
-import 'package:codefactory/restaurant/restaurant_screen.dart';
+import 'package:codefactory/restaurant/view/restaurant_screen.dart';
 import 'package:flutter/material.dart';
 
 class RootTab extends StatefulWidget {
