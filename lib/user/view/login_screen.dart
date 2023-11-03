@@ -81,8 +81,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       final refreshToken = resp.data['refreshToken'];
                       final accessToken = resp.data['accessToken'];
 
-                      storge.write(key: REFRESH_TOKEN_KEY, value: refreshToken);
-                      storge.write(key: ACCESS_TOKEN_KEY, value: accessToken);
+                      storage.write(
+                          key: REFRESH_TOKEN_KEY, value: refreshToken);
+                      storage.write(key: ACCESS_TOKEN_KEY, value: accessToken);
 
                       Navigator.of(context).pushAndRemoveUntil(
                           MaterialPageRoute(
