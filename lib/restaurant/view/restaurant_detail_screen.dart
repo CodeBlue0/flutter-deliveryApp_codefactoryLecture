@@ -11,12 +11,13 @@ import 'package:codefactory/restaurant/model/restaurant_detail_model.dart';
 import 'package:codefactory/restaurant/model/restaurant_model.dart';
 import 'package:codefactory/restaurant/provider/restaurant_provider.dart';
 import 'package:codefactory/restaurant/provider/restaurant_rating_provider.dart';
-import 'package:codefactory/restaurant/repository/restaurant_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:skeletons/skeletons.dart';
 
 class RestaurantDetailScreen extends ConsumerStatefulWidget {
+  static String get routeName => 'restaurantDetail';
+
   final String id;
 
   const RestaurantDetailScreen({required this.id, Key? key}) : super(key: key);
