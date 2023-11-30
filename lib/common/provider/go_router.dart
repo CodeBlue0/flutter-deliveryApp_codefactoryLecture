@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 final routerProvider = Provider<GoRouter>((ref) {
-  final provider = ref.read(authProvier);
+  final provider = ref.read(authProvier.notifier);
 
   return GoRouter(
     routes: provider.routes,

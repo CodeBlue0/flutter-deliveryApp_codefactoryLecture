@@ -20,7 +20,6 @@ class AuthProvider extends ChangeNotifier {
     required this.ref,
   }) {
     ref.listen<UserModelBase?>(userMeProvider, (previous, next) {
-      print('previous: $previous, next: $next');
       if (previous != next) {
         notifyListeners();
       }
@@ -65,7 +64,6 @@ class AuthProvider extends ChangeNotifier {
     final UserModelBase? user = ref.read(userMeProvider);
 
     final logginIn = state.location == '/login';
-    print('user: $user, logginIn: $logginIn');
 
     // 유저 정보가 없는데
     // 로그인 중이면 그대로 로그인 페이지에 두고

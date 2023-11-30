@@ -1,5 +1,6 @@
 import 'package:codefactory/common/const/data.dart';
 import 'package:codefactory/common/secure_storage/secure_storage.dart';
+import 'package:codefactory/user/provider/auth_provider.dart';
 import 'package:codefactory/user/provider/user_me_provider.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -95,7 +96,7 @@ class CustomInterceptor extends Interceptor {
 
         return handler.resolve(response);
       } on DioError {
-        ref.read(userMeProvider.notifier).logout();
+        ref.read(authProvier.notifier).logout();
 
         return handler.reject(err);
       }
