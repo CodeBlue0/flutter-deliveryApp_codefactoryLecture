@@ -13,9 +13,11 @@ import 'package:codefactory/restaurant/model/restaurant_detail_model.dart';
 import 'package:codefactory/restaurant/model/restaurant_model.dart';
 import 'package:codefactory/restaurant/provider/restaurant_provider.dart';
 import 'package:codefactory/restaurant/provider/restaurant_rating_provider.dart';
+import 'package:codefactory/restaurant/view/basket_screen.dart';
 import 'package:codefactory/user/provider/basket_provider.dart';
 import 'package:flutter/material.dart' hide Badge;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:skeletons/skeletons.dart';
 import 'package:badges/badges.dart';
 
@@ -67,7 +69,7 @@ class _RestaurantDetailScreenState
         title: '불타는 떡볶이',
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            // Navigator.of(context).pushNamed('/basket');
+            context.pushNamed(BasketScreen.routeName);
           },
           backgroundColor: PRIMARY_COLOR,
           child: Badge(
