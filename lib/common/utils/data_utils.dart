@@ -4,7 +4,12 @@ import 'package:codefactory/common/const/data.dart';
 
 class DataUtils {
   static DateTime stringToDateTime(String value) {
-    return DateTime.parse(value);
+    if (value is DateTime) {
+      return DateTime.parse(value);
+    } else {
+      print("지금 시간으로 반환");
+      return DateTime.now();
+    }
   }
 
   static String pathToUrl(String path) {

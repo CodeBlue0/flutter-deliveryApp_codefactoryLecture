@@ -8,13 +8,13 @@ class PostOrderBody {
   final String id;
   final List<PostOrderBodyProduct> products;
   final int totalPrice;
-  final String ceatedAt;
+  final String createdAt;
 
   const PostOrderBody({
     required this.id,
     required this.products,
     required this.totalPrice,
-    required this.ceatedAt,
+    required this.createdAt,
   });
 
   factory PostOrderBody.fromJson(Map<String, dynamic> json) =>

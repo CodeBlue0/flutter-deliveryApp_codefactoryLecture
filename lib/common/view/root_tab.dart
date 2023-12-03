@@ -1,5 +1,6 @@
 import 'package:codefactory/common/const/colors.dart';
 import 'package:codefactory/common/layout/default_layout.dart';
+import 'package:codefactory/order/view/order_screen.dart';
 import 'package:codefactory/product/view/product_screen.dart';
 import 'package:codefactory/restaurant/view/restaurant_screen.dart';
 import 'package:codefactory/user/view/profile_screen.dart';
@@ -65,11 +66,11 @@ class _RootTabState extends State<RootTab> with SingleTickerProviderStateMixin {
       child: TabBarView(
         physics: const NeverScrollableScrollPhysics(),
         controller: controller,
-        children: [
-          const RestaurantScreen(),
-          const ProductScreen(),
-          Center(child: Container(child: const Text('주문'))),
-          const Center(child: ProfileScreen()),
+        children: const [
+          RestaurantScreen(),
+          ProductScreen(),
+          OrderScreen(),
+          Center(child: ProfileScreen()),
         ],
       ),
     );

@@ -54,7 +54,7 @@ class CustomInterceptor extends Interceptor {
   void onResponse(Response response, ResponseInterceptorHandler handler) {
     print(
         '[RES] [${response.requestOptions.method}] ${response.requestOptions.uri}');
-    // print(response.data);
+    print(response.data);
     return super.onResponse(response, handler);
   }
 
@@ -97,6 +97,7 @@ class CustomInterceptor extends Interceptor {
 
         return handler.resolve(response);
       } on DioError {
+        print("ererererereere$err");
         ref.read(authProvier.notifier).logout();
 
         return handler.reject(err);
